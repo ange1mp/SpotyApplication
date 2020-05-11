@@ -1,0 +1,20 @@
+<div class="row">
+    <div class="col">
+        <input #valor type="text" (keyup.enter)="buscar(valor.value)" class="form-control" placeholder="Busca...">
+    </div>
+</div>
+<br>
+
+<div class="container m-5">
+    <app-loader *ngIf="loading"></app-loader>
+
+</div>
+<app-tarjetas [items]="cantante"></app-tarjetas>
+
+<!--
+<div class="card-columns m-5">
+    <div class="card" *ngFor="let autor of cantante">
+        <img [src]="autor.images | noimagen" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{autor.name}}</h5>
+        </div>-->
